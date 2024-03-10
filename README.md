@@ -1,3 +1,3 @@
 # Emotion-Music-Player
 
-Find the Web App Deployment: [@PuceHunter](https://github.com/PuceHunter/semp-app)
+Find the Web App Deployment: [@RZDeploys](https://github.com/RZDeploys/semp-app)
