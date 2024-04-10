@@ -1,0 +1,70 @@
+.output-box-inner-div {
+    display: flex;
+    margin: 26px 0;
+}
+
+.output-box-container {
+    position: relative;
+}
+
+.output-box-music-div {
+    width: 800px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.output-box-music-inner-div {
+    display: flex;
+}
+
+.output-box-music-inner-div-content {
+    margin-left: 20px;
+    margin-top: 5px;
+    line-height: 4px;
+    text-align: left;
+}
+
+.output-box-music-inner-div-content h3 {
+    margin-block-start: 8px;
+}
+
+.output-box-music-inner-div-content p {
+    margin-bottom: 20px;
+    margin-left: 0;
+    font-size: small;
+}
+
+.preview-btn {
+    color: black;
+    background-color: beige;
+    font-weight: 600;
+    padding: 0 10px;
+    border-radius: 3px;
+    font-size: medium;
+}
+
+.output-box-music-inner-div-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -15px;
+}
+
+.spotify-icon {
+    color: white;
+}
+
+.play-song-icon {
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+.output-box-music-percent-div {
+    margin: 1rem 0 0 25px;
+}
+
+.output-box-music-percent-div h3 {
+    margin: -15px 0 10px 0;
+}

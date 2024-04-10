@@ -1,0 +1,48 @@
+.overall-analysis-h1 {
+    margin-bottom: 0;
+}
+
+.overall-analysis-h2 {
+    margin: 0;
+}
+
+.more-info-box-inner-div {
+    margin: 2px 0 10px -20px;
+}
+
+.overall-analysis-details-h2 {
+    text-align: right;
+    margin-right: 80px;
+}
+
+.overall-analysis-details-h2 h2 {
+    margin: 5px auto;
+}
+
+.genenerated-emotion-label {
+    padding: 5px 0;
+    background-color: #472044;
+    border-radius: 20px;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.percent-bg {
+    background-color: #671427;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+
+.overall-analysis-box {
+    border-radius: 8px;
+    width: 100%;
+    height: 370px;
+    margin-bottom: 50px;
+    background-color: #472044;
+    background-image: linear-gradient(225deg, #472044 0%, #2f334f 50%, #09545f 100%);
+}
+
+.overall-analysis-box h2 {
+    padding-top: 20px;
+}
