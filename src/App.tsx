@@ -6,13 +6,9 @@ import { useAudioRecorder } from "@sarafhbk/react-audio-recorder";
 // Material UI
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import Grid from "@mui/material/Grid";
-import FormControl from "@mui/material/FormControl";
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 // React Icons
 import { IoIosMusicalNote } from "react-icons/io";
@@ -45,7 +41,6 @@ interface GeneratedSong {
 }
 
 const MainApp: React.FC<MainAppProps> = () => {
-  const [genre, setGenre] = useState("");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [moreInfoData, setMoreInfoData] = useState<any>(null);
   const [data, setData] = useState<ResponseData | null>(null);
@@ -68,13 +63,9 @@ const MainApp: React.FC<MainAppProps> = () => {
     setShowMoreInfo(false);
   };
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setGenre(event.target.value as string);
-  };
-
   const handleRecommendMusic = async () => {
     if (!selectedFile && !audioResult) {
-      console.error("No audio file selected or recorded.");
+      window.alert("Please select any Audio file or Record Audio.");
       return;
     }
 
@@ -167,6 +158,7 @@ const MainApp: React.FC<MainAppProps> = () => {
 
   const handleGenerateMusic = async () => {
     if (!data || !data.final_prediction || !data.final_prediction.label) {
+      window.alert("You will get Recommendations and Generated Music as well.");
       handleRecommendMusic();
     }
 
@@ -222,7 +214,7 @@ const MainApp: React.FC<MainAppProps> = () => {
                         </button>
                       </div>
                     </div>
-                    <p>Or</p>
+                    <p style={{paddingRight: '10px'}}>Or</p>
                     <Button
                       component="label"
                       role={undefined}
@@ -248,62 +240,10 @@ const MainApp: React.FC<MainAppProps> = () => {
                     }
                   />
 
-                  <Grid container spacing={2}>
-                    <Grid item xs={4}>
-                      <h2 style={{ color: "white" }}>Genre</h2>
-                    </Grid>
-                    <Grid item xs={7} style={{ marginTop: "20px" }}>
-                      <FormControl
-                        fullWidth
-                        className="formcontrol"
-                        size="small"
-                      >
-                        <InputLabel
-                          id="demo-simple-select-label"
-                          sx={{
-                            "&.MuiInputLabel-root": { color: "white" },
-                            "&.MuiInputLabel-root.Mui-focused": {
-                              color: "white",
-                            },
-                          }}
-                        >
-                          Genre
-                        </InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={genre}
-                          label="Genre"
-                          onChange={handleChange}
-                          sx={{
-                            "& .MuiSvgIcon-root": { color: "white" },
-                            "&.MuiOutlinedInput-root": {
-                              "& fieldset": { borderColor: "white" },
-                              "&:hover fieldset": { borderColor: "white" },
-                              "&.Mui-focused fieldset": {
-                                borderColor: "white",
-                              },
-                            },
-                            "& .MuiSelect-select.MuiSelect-select": {
-                              color: "white",
-                            },
-                          }}
-                        >
-                          <MenuItem value={1}>Classical</MenuItem>
-                          <MenuItem value={2}>Pop</MenuItem>
-                          <MenuItem value={3}>Electronic</MenuItem>
-                          <MenuItem value={4}>Romantic</MenuItem>
-                          <MenuItem value={5}>Background Music</MenuItem>
-                          <MenuItem value={6}>Dubstep</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Grid>
-                  </Grid>
-
                   <Button
                     variant="contained"
                     className="recommendMusicButton"
-                    style={{ width: "90%", marginTop: "30px" }}
+                    style={{ width: "90%", marginTop: "70px" }}
                     onClick={handleRecommendMusic}
                   >
                     <IoIosMusicalNote /> &nbsp; Recommend Music
@@ -374,7 +314,7 @@ const MainApp: React.FC<MainAppProps> = () => {
         {generatedSongUrl && data && (
           <>
             <Container maxWidth="xl" fixed>
-              <Box className="custom-box more-info-box">
+              <Box className="custom-box more-info-box" style={{width: '101%'}}>
                 <Box className="more-info-btn-box">
                   <h3>Generated Music</h3>
                 </Box>
