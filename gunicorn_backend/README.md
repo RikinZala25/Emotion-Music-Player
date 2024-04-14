@@ -14,6 +14,6 @@ export SPOTIFY_CLIENT_SECRET=your_key
 
 - Replace `your_key` to respective keys
 - Assembly Key [assemblyai.com](https://www.assemblyai.com/dashboard/signup)
-- MusicMatch API Key [musixmatch.com](https://www.musixmatch.com/sign-in)
+- MusicMatch API Key [developer.musixmatch.com](https://developer.musixmatch.com/login)
 - Replicate API Key [replicate.com](https://replicate.com/signin?next=/)
 - Spotify API Key [developer.spotify.com](https://developer.spotify.com/dashboard)
