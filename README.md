@@ -1,5 +1,19 @@
 # React + TypeScript + Vite
 
+## How to run?
+
+Initial Setup
+- Do the setup as described in `gunicord_backend`
+- In `src/App.tsx`
+- Add comments to Lines -> 95-97 & 183-185
+- Remove comments from Lines -> 3, 55, 85-93, 173-181
+- In Line 55 -> Setup your backend url, you will get it when you run the gunicorn_backend server
+
+Run
+- `npm install --legacy-peer-deps`
+- `num run dev`
+
+---
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
