@@ -24,6 +24,7 @@ export SPOTIFY_CLIENT_SECRET=your_key
 
 - Create a virtual environment, refer the docs [python.org/venv](https://docs.python.org/3/library/venv.html)
 - Activate the venv
+- Create a folder by name `uploads` in this directory
 - run `pip install -r requirements.txt`
 - run `Flask run` or `python app.py`
 - If any error regarding modules - try to upgrade the packages installed to the latest version
